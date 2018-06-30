@@ -1,7 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## given a matrix x, returns a cache-friendly version of it, 
+## with ancillary functions to cache the result of "solve" (matrix inversion)
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -18,7 +16,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## returns the result of the "solve" function applied to matrix x
+## if it was already calculated, returns the result from the cache, 
+## otherwise calculates it on the fly and saves it in the cache
 
 cacheSolve <- function(x, ...) {
     m <- x$getsolve()
